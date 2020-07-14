@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.login-box {
+    width: 360px;
+    height: 440px;
+    padding: 60px 40px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.login-box h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.btn-box {
+    margin: 30px auto;
+    border-bottom: 2px solid #b2bec3;
+}
+
+.btn-box input {
+    border: 0;
+    background: none;
+    outline: none;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-box span {
+    position: absolute;
+}
+
+.btn-box span::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 8px;
+    left: -185px;
+    z-index: -1;
+    font-size: 16px;
+    color: #b2bec3;
+    transition: .5s;
+}
+
+.btn-box span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 39px;
+    left: -205px;
+    width: 0px;
+    height: 3px;
+    background: linear-gradient(120deg, #e056fd, #f9ca24);
+    transition: .5s;
+}
+
+.focus + span::before {
+    top:-15px;
+}
+
+.focus + span::after {
+    width: 282px;
+}
+
+.login-btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: none;
+    outline: none;
+    margin-top: 55px;
+    background: linear-gradient(120deg, #e056fd, #f9ca24);
+    background-size: 200%;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-position: right;
+} 
+
+.bottom-text{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+}

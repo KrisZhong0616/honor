@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <form class="login-box" action="index.html" method="post">
+        <h1>登录华为账号</h1>
+        <div class="btn-box">
+            <input type="text" >
+            <span data-placeholder="手机号/邮件号/华为账号"></span>
+        </div>
+        <div class="btn-box">
+            <input type="password" >
+            <span data-placeholder="密码"></span>
+        </div>
+        <input class="login-btn" type="submit" value="登录">
+        <div class="bottom-text">
+            Don't have a account?
+            <a href="#">Sign Up?</a>
+        </div>
+    </form>
+    <script>
+        $(".btn-box input").on("focus", function() {
+            $(this).addClass('focus');
+        })
+        $(".btn-box input").on("blur", function(){
+        if($(this).val() == ""){
+          $(this).removeClass('focus');
+        }
+      })
+    </script>
+</body>
+</html>
